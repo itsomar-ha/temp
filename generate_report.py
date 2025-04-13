@@ -17,7 +17,6 @@ CSS_STYLE = """
 """
 
 def generate_paragraph(metric, value):
-    """إرجاع نص تحليلي طويل بناءً على قيمة المقياس"""
     explanations = {
         "Shot Speed": (
             "Shot speed is one of the most crucial factors in modern tennis. A faster shot means the opponent has less time to react, leading to more forced errors. "
@@ -101,9 +100,8 @@ def evaluate_talent(player_stats, player):
     return summary
 
 def generate_player_report(player_stats, player, md_output, pdf_output):
-    """توليد تقرير لكل لاعب"""
     if player_stats.empty:
-        print("❌ البيانات فارغة!")
+        print("EMPTY!")
         return None
 
     content = f"""# Tennis Player Report - {player}
