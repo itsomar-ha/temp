@@ -60,10 +60,13 @@ def calculate_player_scores(data):
     player_1_data = df[['player_1_Score_Percentage', 'player_1_Total_Score'] + [col for col in df.columns if col.startswith('player_1_')]].to_dict(orient='records')[0]
     player_2_data = df[['player_2_Score_Percentage', 'player_2_Total_Score'] + [col for col in df.columns if col.startswith('player_2_')]].to_dict(orient='records')[0]
 
-    with open('player_1_data.json', 'w') as file_1:
-        json.dump(player_1_data, file_1, indent=4)
-    
-    with open('player_2_data.json', 'w') as file_2:
-        json.dump(player_2_data, file_2, indent=4)
-
+    #with open('player_1_data.json', 'w') as file_1:
+      #  print(json.dump(player_1_data, file_1, indent=4))
+  
+    #with open('player_2_data.json', 'w') as file_2:
+     #   print(json.dump(player_2_data, file_2, indent=4))
+    print("Player 1 Data:")
+    print(json.dumps(player_1_data, indent=4))
+    print("\nPlayer 2 Data:")
+    print(json.dumps(player_2_data, indent=4))
     return df[['player_1_Score_Percentage','player_2_Score_Percentage']]
