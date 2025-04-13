@@ -7,7 +7,6 @@ from utils import (read_video,
 import constants
 from app_rep import calculate_player_scores
 from generate_report import generate_player_report
-from stats_chart import  generate_radar_charts
 from utils.player_stats_drawer_utils import generate_report_max_only,get_video_fps
 from trackers import PlayerTracker,BallTracker
 from court_line_detector import CourtLineDetector
